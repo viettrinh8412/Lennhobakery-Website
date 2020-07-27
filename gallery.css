@@ -1,0 +1,72 @@
+.container h2,h4{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: Arial Cambria;
+  font-style: italic;
+}
+.portfolio-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  max-width: 530px;
+  margin: auto auto 1rem;
+  margin-bottom: 10px;
+}
+.portfolio-section{
+    
+  font-size: 30px;
+  font-size: 5rem;
+  background: pink;
+}
+
+.portfolio-item .caption {
+ 
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  color: white;
+}
+
+.modal-body img{
+  width: 400px;
+  height: 300px;
+}
+
+.modal-header h4{
+  font-family: Arial Cambria;
+  font-weight: bold;
+
+}
+
+@media (min-width: 992px) {
+  .portfolio-item {
+    max-width: none;
+    margin: 0;
+  }
+  .portfolio-item .caption {
+    -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;
+    -webkit-clip-path: inset(0px);
+    clip-path: inset(0px);
+  }
+  .portfolio-item img {
+    -webkit-transition: -webkit-clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(-1px);
+    clip-path: inset(-1px);
+  }
+  .portfolio-item:hover img {
+    -webkit-clip-path: inset(2rem);
+    clip-path: inset(2rem);
+  }
+  .portfolio-item:hover .caption {
+    background-color: rgba(29, 128, 159, 0.9);
+    -webkit-clip-path: inset(2rem);
+    clip-path: inset(2rem);
+  }
+}
+  
+
+
